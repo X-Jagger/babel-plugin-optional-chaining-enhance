@@ -12,16 +12,12 @@
   </a>
 </p>
 
-> Automatically add &#39;?.&#39;(optional chaining) to codes and transform them with @babel/babel-plugin-optional-chaining
-
-* [中文版](./README_CN.md)
+> 优雅取值的终极方案：再也不用使用一堆的&&，使用lodash.get, 使用不兼容的Proxy, 随意链式取值，所有的前缀判断都在编译时自动添加
 
 ## ✨ Example
+> x.a => x?.a => var _x; (_x = x) === null || _x === void 0 ? void 0 : _x.a;
 
-You just need to write the codes, and `babel-plugin-optional-chaining-plugin` will do all for you.
-> x.a => x?.a => var _x;(_x = x) === null || _x === void 0 ? void 0 : _x.a;
-
-#### Support
+#### 目前支持
  * y = a.b.c.d.e.f => y = a?.b?.c?.d?.e?.f => transform by @babel/babel-plugin-optional-chaining
  * const x = a.b.c.d.e => var x = a?.b?.c?.d?.e => transform~
  * fn(a.b.c.d.e) => fn(a?.b?.c?.d?.e) => transform~
@@ -30,10 +26,10 @@ You just need to write the codes, and `babel-plugin-optional-chaining-plugin` wi
  * x['123'].vc.s => x?.['123']?.vc?.s => transform~
  * if (x.a.b) {} => if (x?.a?.b) {} => transform~
 
-#### Not support
- * new Test() !=> new Test?.()
- * x.a.c = 2 !=> (x?.a).c = 2
- * x() !=> x?.() // manually using x?.() is Ok
+#### 目前不支持
+ * 不支持new Test() !=> new Test?.();
+ * 不支持x.a.c = 2 !=> (x?.a).c = 2 左侧声明式转换
+ * 不支持x() !=> x?.() // 函数调用会有比较多的问题，请自己添加?.使用， 比如x?.()
 
 
 ## Install
@@ -41,10 +37,9 @@ You just need to write the codes, and `babel-plugin-optional-chaining-plugin` wi
 ```sh
 npm install -D babel-plugin-optional-chaining-enhance
 ```
-
 ## 🚀 Usage
 
-Because this plugin has already integrated @babel/babel-plugin-optional-chaining, please don't use @babel/babel-plugin-optional-chaining anymore.
+因为本插件集成了babel-plugin-optional-chaining, 所以请务必不要再添加babel-plugin-optional-chaining
 
 1 .babelrc/babel.config.js
 ```js
@@ -54,11 +49,11 @@ Because this plugin has already integrated @babel/babel-plugin-optional-chaining
     ]
 }
 ```
-2 Enjoy writing clean codes
+
 
 ## TODO
-* [x] complete basic functionality
-* [ ] Add test
+* [x] 完成基本功能
+* [ ] 添加测试
 
 ## Author
 
@@ -74,6 +69,10 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2019 [X-Jagger](https://github.com/X-Jagger).<br />
 This project is [MIT](https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance/blob/master/LICENSE) licensed.
+
+#### 相关链接
+- https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining
+- https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
