@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to babel-plugin-optional-chaining-enhance 👋</h1>
+<h1 align="center">Babel-plugin-optional-chaining-enhance</h1>
 <p>
   <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance#readme">
@@ -58,7 +58,8 @@ Because this plugin has already integrated @babel/babel-plugin-optional-chaining
 
 ## TODO
 * [x] complete basic functionality
-* [ ] Add test
+* [x] Add test
+* [x] Add travis
 
 ## Author
 

@@ -4,21 +4,28 @@
   "description": "Add '?.'(optional chaining) automatically to codes and transform them with babel-plugin-optional-chaining",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "npm version patch && npm publish"
+    "test": "jest ./test/index.test.js",
+    "pub": "npm test && npm version patch && npm publish",
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance"
   },
-  "dependencies": {
-    "@babel/helper-plugin-utils": "^7.0.0",
-    "@babel/plugin-syntax-optional-chaining": "^7.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/helper-plugin-test-runner": "^7.0.0",
-    "@babel/plugin-transform-block-scoping": "^7.2.0"
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-optional-chaining": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-plugin-tester": "^6.4.0",
+    "jest": "^24.8.0",
+    "shelljs": "^0.8.3"
   },
   "keywords": [
     "babel",
