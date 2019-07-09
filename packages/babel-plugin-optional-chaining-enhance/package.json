@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-optional-chaining-enhance",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Add '?.'(optional chaining) automatically to codes and transform them with babel-plugin-optional-chaining",
   "main": "lib/index.js",
   "repository": {
