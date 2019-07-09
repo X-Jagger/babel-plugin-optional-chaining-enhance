@@ -23,6 +23,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
     "babel-plugin-tester": "^6.4.0",
+    "codecov": "^3.5.0",
     "jest": "^24.8.0"
   },
   "keywords": [
@@ -30,6 +31,9 @@
     "plugin",
     "optional chaining"
   ],
+  "jest": {
+    "collectCoverage": true
+  },
   "author": "X-Jagger",
   "license": "MIT"
 }

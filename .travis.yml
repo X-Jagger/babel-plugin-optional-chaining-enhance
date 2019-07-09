@@ -12,3 +12,4 @@ install:
 
 script:
   - npm run test
+  - ./node_modules/.bin/codecov --token=$CODECOV_TOKEN

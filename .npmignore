@@ -1,5 +1,6 @@
 test
 src
+coverage
 .babelrc
 package-lock.json
 .gitignore
