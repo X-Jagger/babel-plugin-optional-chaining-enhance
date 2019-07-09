@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-optional-chaining-enhance",
+  "version": "0.0.3",
+  "description": "Add '?.'(optional chaining) automatically to codes and transform them with babel-plugin-optional-chaining",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/plugin-syntax-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.5.2"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "optional chaining"
+  ],
+  "author": "X-Jagger",
+  "license": "MIT"
+}

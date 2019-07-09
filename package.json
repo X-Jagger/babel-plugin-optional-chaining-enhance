@@ -1,12 +1,11 @@
 {
   "name": "babel-plugin-optional-chaining-enhance",
-  "version": "0.0.3",
-  "description": "Add '?.'(optional chaining) automatically to codes and transform them with babel-plugin-optional-chaining",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "jest ./test/index.test.js",
-    "pub": "npm test && npm version patch && npm publish",
-    "build": "babel src --out-dir lib"
+    "test": "jest packages/babel-plugin-optional-chaining-enhance/test/index.test.js",
+    "pub": "npm run test && npm run build && cd packages/babel-plugin-optional-chaining-enhance && npm version patch && npm publish && cd ../../",
+    "build": "npx babel packages/babel-plugin-optional-chaining-enhance/src --out-dir packages/babel-plugin-optional-chaining-enhance/lib",
+    "push": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
