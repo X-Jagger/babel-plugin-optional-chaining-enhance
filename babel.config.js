@@ -6,14 +6,6 @@ module.exports = api => {
             test: {
                 presets: [["@babel/env", { targets: { node: "current" } }]]
             }
-        },
-        overrides: [
-            {
-                test: "packages/babel-plugin-optional-chaining-enhance",
-                presets: [
-                    "@babel/env"
-                ]
-            }
-        ]
+        }
     };
 };
