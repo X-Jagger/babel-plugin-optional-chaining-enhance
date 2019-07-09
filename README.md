@@ -1,15 +1,17 @@
 <h1 align="center">Babel-plugin-optional-chaining-enhance</h1>
-<p>
-  <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
   <a href="https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
+</p>
+<p align="center">
+  <a href="https://travis-ci.org/X-Jagger/babel-plugin-optional-chaining-enhance"><img alt="Travis Status" src="https://img.shields.io/travis/X-Jagger/babel-plugin-optional-chaining-enhance/master.svg?label=travis&maxAge=43200"></a>
+  <a href="https://circleci.com/gh/X-Jagger/babel-plugin-optional-chaining-enhance"><img alt="CircleCI Status" src="https://img.shields.io/circleci/project/github/X-Jagger/babel-plugin-optional-chaining-enhance/master.svg?label=circle&maxAge=43200"></a>
+  <a href="https://codecov.io/gh/X-Jagger/babel-plugin-optional-chaining-enhance"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/X-Jagger/babel-plugin-optional-chaining-enhance/master.svg?maxAge=43200"></a>
 </p>
 
 > Automatically add &#39;?.&#39;(optional chaining) to codes and transform them with @babel/babel-plugin-optional-chaining
@@ -59,13 +61,8 @@ Because this plugin has already integrated @babel/babel-plugin-optional-chaining
 ## TODO
 * [x] complete basic functionality
 * [x] Add test
-* [x] Add travis
-
-## Author
-
-👤 **X-Jagger**
-
-* Github: [@X-Jagger](https://github.com/X-Jagger)
+* [x] Add travis, circleci
+* [x] Add coverage test
 
 ## Show your support
 

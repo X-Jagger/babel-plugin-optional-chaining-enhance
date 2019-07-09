@@ -53,13 +53,9 @@ npm install -D babel-plugin-optional-chaining-enhance
 
 ## TODO
 * [x] 完成基本功能
-* [ ] 添加测试
-
-## Author
-
-👤 **X-Jagger**
-
-* Github: [@X-Jagger](https://github.com/X-Jagger)
+* [x] 添加测试
+* [x] Add travis, circleci
+* [x] Add coverage test
 
 ## Show your support
 
