@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest packages/babel-plugin-optional-chaining-enhance/test/index.test.js",
-    "pub": "npm run test && npm run build && cd packages/babel-plugin-optional-chaining-enhance && npm version patch && npm publish && cd ../../",
+    "test": "npm run build && jest packages/babel-plugin-optional-chaining-enhance/test/index.test.js",
+    "pub": "npm run test && cp *.md packages/babel-plugin-optional-chaining-enhance && cd packages/babel-plugin-optional-chaining-enhance && npm version patch && npm publish && cd ../../",
     "build": "npx babel packages/babel-plugin-optional-chaining-enhance/src --out-dir packages/babel-plugin-optional-chaining-enhance/lib",
     "push": "git push --follow-tags"
   },
