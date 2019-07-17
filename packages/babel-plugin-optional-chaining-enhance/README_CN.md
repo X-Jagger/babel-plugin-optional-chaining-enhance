@@ -39,17 +39,54 @@ npm install -D babel-plugin-optional-chaining-enhance
 ```
 ## 🚀 Usage
 
-因为本插件集成了babel-plugin-optional-chaining, 所以请务必不要再添加babel-plugin-optional-chaining
-
+- 因为本插件集成了babel-plugin-optional-chaining, 所以请务必不要再添加babel-plugin-optional-chaining
+- 把这个插件放到最后
 1 .babelrc/babel.config.js
 ```js
 {
   "plugins": [
-     'babel-plugin-optional-chaining-enchance'
+     'babel-plugin-optional-chaining-enchance' // 把这个插件放到其他插件后面
     ]
 }
 ```
+## Options
 
+```js
+{
+  "plugins": [
+     ['babel-plugin-optional-chaining-enchance', {loose: false, auto: ture}]
+    ]
+}
+```
+### auto
+
+布尔值，默认为true
+
+如果为true，此转换将自动添加“？”。对所有相关代码进行转换。
+
+如果为false，这个插件其实是@babel/plugin-proposal-optional-chaining，只转换"?."的代码
+
+### loose
+布尔值，默认为false。
+
+如果为true，则此转换将假装document.all不存在，并使用null执行松散的相等性检查，而不是对null和undefined进行严格的相等性检查。
+
+Example In
+
+```js
+foo?.bar;
+```
+
+Out (loose === true)
+
+```js
+foo == null ? void 0 : foo.bar;
+```
+
+Out (loose === false)
+```js
+foo === null || foo === void 0 ? void 0 : foo.bar;
+```
 
 ## TODO
 * [x] 完成基本功能
