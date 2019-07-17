@@ -46,20 +46,58 @@ npm install -D babel-plugin-optional-chaining-enhance
 
 ## 🚀 Usage
 
-Because this plugin has already integrated @babel/babel-plugin-optional-chaining, please don't use @babel/babel-plugin-optional-chaining anymore.
+- Because this plugin has already integrated @babel/babel-plugin-optional-chaining, please don't use @babel/babel-plugin-optional-chaining anymore.
+- Put it at the last position of all plugins
 
 1 .babelrc/babel.config.js
 
 ```js
 {
   "plugins": [
-     'babel-plugin-optional-chaining-enchance'
+     'babel-plugin-optional-chaining-enchance' // put it at the last of all plugins
     ]
 }
 ```
 
 2 Enjoy writing clean codes
 
+## Options
+
+```js
+{
+  "plugins": [
+     ['babel-plugin-optional-chaining-enchance', {loose: false, auto: ture}]
+    ]
+}
+```
+### auto
+boolean, defaults to true
+
+when true, this transform will automatically add '?.' to all the relevant codes and transform them.
+
+when false, this plugin is @babel/plugin-proposal-optional-chaining, only transform the codes with '?.' before.
+
+### loose
+boolean, defaults to false.
+
+When true, this transform will pretend document.all does not exist, and perform loose equality checks with null instead of strict equality checks against both null and undefined.
+
+Example In
+
+```js
+foo?.bar;
+```
+
+Out (loose === true)
+
+```js
+foo == null ? void 0 : foo.bar;
+```
+
+Out (loose === false)
+```js
+foo === null || foo === void 0 ? void 0 : foo.bar;
+```
 ## TODO
 
 -   [x] complete basic functionality

@@ -1,5 +1,4 @@
 {
-  "name": "babel-plugin-optional-chaining-enhance",
   "private": true,
   "scripts": {
     "test": "jest packages/babel-plugin-optional-chaining-enhance/test/index.test.js",
@@ -11,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/X-Jagger/babel-plugin-optional-chaining-enhance"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
@@ -20,7 +18,10 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-optional-chaining": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
+    "@babel/runtime-corejs3": "^7.5.4",
+    "@babel/runtime": "^7.5.4",
     "babel-plugin-tester": "^6.4.0",
     "codecov": "^3.5.0",
     "jest": "^24.8.0"
@@ -30,9 +31,6 @@
     "plugin",
     "optional chaining"
   ],
-  "jest": {
-    "collectCoverage": true
-  },
   "author": "X-Jagger",
   "license": "MIT"
 }
