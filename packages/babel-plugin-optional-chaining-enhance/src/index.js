@@ -38,7 +38,20 @@ export default declare((api, options) => {
                         leftParentPath &&
                         leftParentPath.parent.type === "AssignmentExpression"
                     ) &&
-                    !(path.node.object.type === "ThisExpression")) ||
+                    !(
+                        [
+                            "NullLiteral",
+                            "NumericLiteral",
+                            "StringLiteral",
+                            "ThisExpression"
+                        ].indexOf(path.node.object.type) !== -1
+                    ) &&
+                    !(
+                        path.node.object.type === "Identifier" &&
+                        ["undefined", "window"].indexOf(
+                            path.node.object.name
+                        ) !== -1
+                    )) ||
                     path.isCallExpression())
             );
         };
