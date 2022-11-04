@@ -54,7 +54,7 @@ npm install -D babel-plugin-optional-chaining-enhance
 ```js
 {
   "plugins": [
-     'babel-plugin-optional-chaining-enchance' // put it at the last of all plugins
+     'babel-plugin-optional-chaining-enhance' // put it at the last of all plugins
     ]
 }
 ```
@@ -66,7 +66,7 @@ npm install -D babel-plugin-optional-chaining-enhance
 ```js
 {
   "plugins": [
-     ['babel-plugin-optional-chaining-enchance', {loose: false, auto: ture}]
+     ['babel-plugin-optional-chaining-enhance', {loose: false, auto: ture}]
     ]
 }
 ```
